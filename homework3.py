@@ -7,8 +7,9 @@ __author__ = 'jstahle'
 def bunny_ears(p):
     if p<1:
         return 0
+    elif p % 2 == 0:
+        return bunny_ears(p-1) + 3
     else:
-
         return bunny_ears(p-1) + 2
 
 ears=input("Please input number of bunnies\n")
