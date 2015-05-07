@@ -77,3 +77,4 @@ s.close()
 
 print(datetime.now()-dt1)
 
+#The Dictionary process is much more efficient than the shelving.
