@@ -44,4 +44,33 @@ else:
     print("Security is good")
 
 #Problem 3
+__author__ = 'jstahle'
+#Homework4_3
+import os
+import shelve
 
+def count_frequency (mylist):
+    result={}
+
+    for each_word in mylist:
+        if result.get(each_word)==None:
+            result[each_word]=1
+        else:
+            result [each_word] = result [each_word] +1
+    return result
+
+mylist=["one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven","one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven","one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven","one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven"]
+
+from datetime import datetime
+dt1 = datetime.now()
+
+print(dt1)
+
+s = shelve.open("homework4")
+s["flower"]=(1,2,11,1,3,2,11,3,7,11,1,2,11,1,3,1,11,3,7,11,1,2,11,1,3,2,11,3,7,11,1,2,11,1,3,2,11,3,7,1)
+s.close()
+
+from datetime import datetime
+dt1 = datetime.now()
+
+print(dt1)
