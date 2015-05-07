@@ -49,6 +49,8 @@ __author__ = 'jstahle'
 import os
 import shelve
 
+from datetime import datetime
+
 def count_frequency (mylist):
     result={}
 
@@ -59,18 +61,19 @@ def count_frequency (mylist):
             result [each_word] = result [each_word] +1
     return result
 
-mylist=["one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven","one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven","one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven","one", "two","eleven",  "one", "three", "two", "eleven", "three", "seven", "eleven"]
+mylist=[1,2,11,1,3,2,11,3,7,11,1,2,11,1,3,1,11,3,7,11,1,2,11,1,3,2,11,3,7,11,1,2,11,1,3,2,11,3,7,1]
 
-from datetime import datetime
 dt1 = datetime.now()
-
 print(dt1)
 
+count_frequency(mylist)
+
+print(datetime.now()-dt1)
+
+dt1 = datetime.now()
 s = shelve.open("homework4")
 s["flower"]=(1,2,11,1,3,2,11,3,7,11,1,2,11,1,3,1,11,3,7,11,1,2,11,1,3,2,11,3,7,11,1,2,11,1,3,2,11,3,7,1)
 s.close()
 
-from datetime import datetime
-dt1 = datetime.now()
+print(datetime.now()-dt1)
 
-print(dt1)
